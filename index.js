@@ -17,6 +17,7 @@ let passwordLength=6;
 function slideCounter(val){
     slideCount.innerHTML=val;
     passwordLength=val;
+    console.log("slide counter ran");
 }
 
  let password="";
