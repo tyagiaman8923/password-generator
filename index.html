@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-generator</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div id="wrapper" class=" flex flex-col items-center justify-center gap-4 h-[100vh] w-[100vw] bg-gradient-to-r from-indigo-500">
+
+       <div class="text-2xl sm:text-3xl font-bold text-white ">PASSWORD GENERATOR</div>
+
+       <div class=" flex  items-center justify-center w-[280px]  sm:w-[360px] h-[50px] bg-black rounded-lg ">
+            <div id="target" class="text-yellow-500 w-[250px] sm:w-[300px] font-bold text-xl  ">PASSWORD</div>
+            <div onclick="copYmsg()" class="relative h-5 w-5 cursor-pointer  opacity-100 ">
+                <div id="copyMsg"  class="w-20 h-6 rounded-lg absolute z-20 flex items-center justify-center font-bold  right-5 bottom-7 text-white "></div>
+                <div onclick="copYmsg()" class="h-4 w-4 border-2  rounded-sm absolute right-0 top-0  bg-black"></div>
+                <div onclick="copYmsg()" class="h-4 w-4 border-2 rounded-sm absolute left-0 bottom-0 bg-black"></div>
+            </div>
+
+        </div>
+
+        <div class="  flex flex-col gap-4 items-center justify-center w-[280px] sm:w-[360px] h-[400px] bg-black rounded-lg ">
+            <div id="length" class="w-[270px] sm:w-[340px] flex items-center justify-center gap-24 sm:gap-32">
+                <div class="text-white font-bold text-xl">Password length </div>
+                <div id="slider-count" class="w-4 h-4  text-yellow-500 flex items-center justify-center font-bold text-lg mb-2">6</div>
+            </div>
+            <div id="slide">
+                <input id="slider" onmousemove="slideCounter(this.value)" onchange="slideCounter(this.value)" type="range" min="1" max="15" value="6"  class="w-[260px] sm:w-[320px]" >
+            </div>
+            <div class="text-white flex flex-col gap-2 w-[260px] sm:w-[320px]" id="checkboxes">
+                <div class=" flex gap-4 items-center"><input id="uppercase" type="checkbox" class="h-4 w-4 "><span>Include Uppercase Letters</span></div>
+                
+                <div class=" flex gap-4 items-center"><input id="lowercase" type="checkbox" class="h-4 w-4 "><span>Include Lowercase Letters</span></div>
+
+                <div class=" flex gap-4 items-center"><input id="numbers" type="checkbox" class="h-4 w-4 "><span>Include Numbers</span></div>
+
+                <div class=" flex gap-4 items-center"><input id="symbols" type="checkbox" class="h-4 w-4 "><span>Include Symbols </span></div>
+            </div>
+
+            <div id="strength" class="flex content-center justify-center w-[260px] sm:w-[320px] gap-52 ">
+                <div class="text-white">Strength</div>
+                <div id="indecate" class="h-4 w-4 bg-slate-400 rounded-full"></div>
+            </div> 
+
+            <div id="generatebutton" class="w-[260px] sm:w-[320px] h-[50px] rounded-lg mx-auto flex items-center justify-center text-white 
+            font-bold bg-purple-800 cursor-pointer hover:bg-purple-400 hover:text-purple-950 transition-all duration-500">GENERATE PASSWORD
+            </div>
+            
+            <div onclick="resetBtn()" id="resetbutton" class="w-[260px] sm:w-[320px] h-[30px] rounded-lg mx-auto flex items-center justify-center text-white 
+            font-bold bg-purple-300 cursor-pointer hover:bg-purple-400 hover:text-purple-950 transition-all duration-500">RESET
+            </div>
+
+         </div>
+
+       
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
