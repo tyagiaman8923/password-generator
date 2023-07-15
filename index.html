@@ -10,7 +10,7 @@
   <body>
     <div
       id="wrapper"
-      class="flex flex-col items-center justify-center gap-4 h-[100vh] w-[100vw] bg-gradient-to-r from-indigo-500"
+      class="flex flex-col items-center justify-center gap-4 min-h-[100vh] min-w-[100vw] bg-gradient-to-r from-indigo-500"
     >
       <div class="text-2xl sm:text-3xl font-bold text-white">
         PASSWORD GENERATOR
@@ -57,7 +57,7 @@
             id="slider-count"
             class="w-4 h-4 text-yellow-500 flex items-center justify-center font-bold text-lg mb-2"
           >
-            7
+            6
           </div>
         </div>
         <div id="slide">
@@ -106,10 +106,10 @@
         </div>
 
         <div
-          id="generatebutton"
-          class=" relative w-[260px] sm:w-[320px] h-[50px] rounded-lg mx-auto flex items-center justify-center text-white font-bold bg-purple-800 cursor-pointer hover:bg-purple-400 hover:text-purple-950 transition-all duration-500"
+          
+          class=" relative w-[260px] sm:w-[320px] h-[50px] rounded-lg mx-auto flex items-center justify-center text-white font-bold bg-purple-800 "
         >
-          GENERATE PASSWORD
+          <p id="generatebutton" class="h-[100%] w-[100%] rounded-lg flex items-center justify-center cursor-pointer hover:bg-purple-400 hover:text-purple-950 transition-all duration-500">GENERATE PASSWORD</p>
           <div id="checkMsg" class="w-44 h-6 rounded-lg absolute z-20 flex items-center justify-center font-bold right-0 sm:-right-3 bottom-32 text-white  "></div>
         </div>
 
